@@ -1,0 +1,225 @@
+:root {
+  /* Dark Fantasy Color Palette - warmer, more luminous */
+  --color-bg: #cdbf9a;
+  --color-bg-secondary: #140a1e;
+  --color-bg-tertiary: #1e1428;
+
+  /* Luminous Gold - candlelit brass tones */
+  --color-gold: #c9a227;
+  --color-gold-light: #e6c744;
+  --color-gold-dark: #8b7320;
+  --color-gold-glow: rgba(201, 162, 39, 0.4);
+
+  /* Warm Purple - with amber undertones */
+  --color-purple: #5a1a8a;
+  --color-purple-light: #a080c0;
+  --color-purple-dark: #2d0a4d;
+  --color-amber: rgba(180, 120, 60, 0.15);
+
+  --color-text: rgba(255, 252, 245, 0.88);
+  --color-text-muted: rgba(255, 250, 240, 0.55);
+
+  /* Typography */
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+
+  color-scheme: dark;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    /* Warm central glow - like firelight */
+    radial-gradient(ellipse 80% 50% at 50% 40%, rgba(180, 120, 60, 0.08) 0%, transparent 50%),
+    /* Purple atmosphere */
+    radial-gradient(ellipse at top, rgba(90, 26, 138, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom, rgba(90, 26, 138, 0.12) 0%, transparent 55%),
+    /* Deep base */
+    var(--color-bg);
+}
+
+/* Ancient fantasy map layer - clean gold linework on parchment */
+.ancient-map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.32;
+  background-image: url("src/assets/MAP.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Organic parchment texture - layered grain and foxing */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.045;
+  background-image:
+    /* Warm organic grain */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0.08 0 1 0 0 0.06 0 0 1 0 0.02 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E"),
+    /* Fine noise layer */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Warm vignette - draws focus inward */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9997;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 45%,
+    transparent 30%,
+    rgba(10, 6, 16, 0.4) 100%
+  );
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Magic haze layer - soft atmospheric glow */
+#root::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 30% 30%, rgba(201, 162, 39, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 35% at 70% 60%, rgba(160, 128, 192, 0.04) 0%, transparent 50%);
+  animation: haze-drift 20s ease-in-out infinite;
+}
+
+@keyframes haze-drift {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.02); }
+}
+
+/* Constellation arc - faint celestial geometry */
+#root::after {
+  content: '';
+  position: fixed;
+  top: 8%;
+  right: 5%;
+  width: 35vw;
+  height: 35vw;
+  max-width: 400px;
+  max-height: 400px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='80' fill='none' stroke='%23c9a227' stroke-width='0.3' stroke-dasharray='2 8'/%3E%3Ccircle cx='100' cy='100' r='60' fill='none' stroke='%23c9a227' stroke-width='0.2' stroke-dasharray='1 12'/%3E%3Ccircle cx='100' cy='100' r='40' fill='none' stroke='%23c9a227' stroke-width='0.3'/%3E%3Ccircle cx='100' cy='20' r='2' fill='%23c9a227'/%3E%3Ccircle cx='160' cy='60' r='1.5' fill='%23c9a227'/%3E%3Ccircle cx='170' cy='120' r='1' fill='%23c9a227'/%3E%3Ccircle cx='140' cy='170' r='1.5' fill='%23c9a227'/%3E%3Ccircle cx='60' cy='170' r='1' fill='%23c9a227'/%3E%3Ccircle cx='30' cy='120' r='1.5' fill='%23c9a227'/%3E%3Ccircle cx='40' cy='60' r='1' fill='%23c9a227'/%3E%3Cline x1='100' y1='20' x2='160' y2='60' stroke='%23c9a227' stroke-width='0.2' opacity='0.5'/%3E%3Cline x1='160' y1='60' x2='170' y2='120' stroke='%23c9a227' stroke-width='0.2' opacity='0.5'/%3E%3Cline x1='170' y1='120' x2='140' y2='170' stroke='%23c9a227' stroke-width='0.2' opacity='0.5'/%3E%3Cline x1='140' y1='170' x2='60' y2='170' stroke='%23c9a227' stroke-width='0.2' opacity='0.5'/%3E%3Cline x1='60' y1='170' x2='30' y2='120' stroke='%23c9a227' stroke-width='0.2' opacity='0.5'/%3E%3Cline x1='30' y1='120' x2='40' y2='60' stroke='%23c9a227' stroke-width='0.2' opacity='0.5'/%3E%3Cline x1='40' y1='60' x2='100' y2='20' stroke='%23c9a227' stroke-width='0.2' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: sigil-pulse 15s ease-in-out infinite;
+}
+
+@keyframes sigil-pulse {
+  0%, 100% { opacity: 0.03; transform: rotate(0deg); }
+  50% { opacity: 0.06; transform: rotate(3deg); }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-gold-light);
+}
+
+button {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  border-color: var(--color-gold);
+  background-color: rgba(201, 162, 39, 0.1);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-purple-dark);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-purple);
+}
+
+/* Selection - warmer */
+::selection {
+  background: rgba(201, 162, 39, 0.35);
+  color: var(--color-text);
+}
