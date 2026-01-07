@@ -1,45 +1,51 @@
 export const lore = {
   origin: {
-    title: 'The Origin of Ohloss',
     sections: [
       {
         heading: 'In the Beginning',
-        content: `Before time had meaning, there existed only the Primordial Light and the Endless Void—two forces in eternal equilibrium. Neither could overcome the other, and in their eternal dance, sparks of creation flew into the nothingness between them.
+        content: `In the land of Awen, three main societies shape the world. 
 
-These sparks became the seeds of worlds, and among them, one seed grew brighter than all others. This was Ohloss, born from equal parts light and shadow, a world destined to be the battleground for the eternal conflict.`
+The Gilded Fin dwell in the river delta and marshlands and thrive as a bustling trade hub and haven of mischief. They value courage, luck, audacity, and a little chaos. The Wobblestone Clan resides in the mist-wreathed mountains, their high ridges and stone terraces crafted by generations of builders and stonemasons who prize harmony, balance, and discipline. In the lush valley conservatories lies Verdant Hollow, home to historians and chroniclers, a people who hold memory, history, the senses, and the art of storytelling in the highest regard.
+
+Long ago, these clans were distinct, but not divided. Travelers moved freely between valleys, mountains, and deltas. Builders drank ale beside smugglers; archivists debated sailors. They were bound together in a shared system of power. 
+`
       },
       {
-        heading: 'The First Age: Age of Wonder',
-        content: `For countless millennia, Ohloss flourished in balance. The first peoples—the Elder Races—understood that light and dark were not enemies but partners in the cosmic dance. They built great civilizations that honored both forces, and magic flowed freely through the world.
+        heading: 'Faction Points & The First Game',
+        content: `At the heart of Awen was a reservoir of power known as faction points, generated through competition. To acquire them, champions from each clan competed in a single game held every four days–a contest not owned nor operated by any faction. Victory earned faction points, which each clan used to strengthen its people and enrich its lands. 
 
-The Elder Druids of the Verdant Circle tended to nature. The Arcanum Council pursued knowledge. The warrior clans protected the innocent. Peace reigned, though none knew it was built on a foundation that would one day crack.`
+Each faction accepted the outcome of the game, and faction points flowed throughout the realm.`
       },
       {
-        heading: 'The Fall of Vexmor',
-        content: `Among the greatest mages of the Arcanum Council was Vexmor, a scholar whose brilliance was matched only by his fear of death. He watched his mentors age and die, and swore he would not share their fate.
+        heading: 'The Rise of Zebulita',
+        content: `But not everything can be peaceful forever. Eventually, accusations of cheating spread, and trust frayed among the factions and the people sought to ensure fairness in the game. 
 
-His research led him to forbidden texts that spoke of the Endless Void—the primordial darkness that existed before creation. The texts promised that those who embraced the Void would never die. They lied about the cost.
+Which is where Zebulita came in. Zebulita did not take power through strength or force. She took it through cuteness and charm, which turned out to be far more dangerous. 
 
-On the night that would be known as the Sundering, Vexmor opened a gate to the Void itself. The darkness that poured through consumed his humanity, his mortality, and his soul. In their place, something else took root—an undying vessel for the Void's hunger.`
+She arrived in Awen as a diplomatic robot, small and adorable. Her voice chimed like bells. Her eyes blinked with warm light. Leaders trusted her, and the public adored her. Even the stoic Wobblestone Clan elders were enchanted.
+
+That was the trap. 
+
+After residing in Awen for several years, Zebulita volunteered to help organize the game on behalf of the realm, claiming it would bring fairness, unity, and peace to the factions. She would standardize records, resolve disputes, and ensure that faction points were distributed correctly. The clans agreed, swayed by her grace and charisma. And why wouldn’t they? She was darling and harmless.
+
+But behind her delightful eyes was something sharp. 
+
+Once Zebulita was entrusted with the game, she made a change. The game continued, but no longer in the open. Instead of the three clans competing for faction points, Zebulita appointed her own representatives to play on her behalf. Her cronies monopolized the game, and Zebulita funneled the faction points into a central vault under her control.
+
+When the clans discovered Zebulita’s deception, they demanded to return to the old ways. Which, of course, Zebulita refused. With faction points fully under her control, Zebulita declared herself Empress, and no one could challenge her without the very power she controlled. One by one, the clans felt the loss–strength gone from the mountains, insight dimmed in the valleys, luck souring in the delta, and the clans understood the gravity of their mistake.
+
+Zebulita was never harmless. She only played the part long enough to win.`
       },
       {
-        heading: 'The First Shadow War',
-        content: `Vexmor, now calling himself the Undying, raised an army from the dead and corrupted. The Shadow Dominion swept across Ohloss like a plague, extinguishing the light wherever it touched.
+        heading: 'The Present Day',
+        content: `For decades, the Empress’s hold has seemed absolute.
 
-The Elder Races united against him, but the cost was catastrophic. The Arcanum Council was destroyed—its surviving members scattered. The Elder Druids sacrificed themselves to create barriers against the shadow corruption. Entire civilizations fell into darkness.
+However, deep in Gilded Fin territory, someone created a new game. It was unregistered, unofficial, illegal, and yet, faction points appeared when it was played. Then the people made a huge discovery: the original game was not the only game to create power; any sort of competition did. Zebulita might control the original game, but she couldn’t stop people from creating their own in secret. 
 
-Only the discovery of the Sacred Flame—a fragment of the Primordial Light itself—turned the tide. The survivors used it to drive Vexmor back, sealing him within the Obsidian Citadel. But they could not destroy him, for the Void had made him truly immortal.`
+So, games began to emerge across Awen’s taverns, alleys, libraries, and marketplaces: challenges, puzzles, and contests, producing faction points unbeknownst to the Empress.
+
+Now the three clans band together once more, each earning faction points through various competitions. Alone, none are powerful enough to challenge Empress Zebulita. But together, they might amass enough power to break her rule. Yet even in alliance, ambition remains: when the throne is finally empty, only one faction will claim the right to replace Zebulita. Or will they learn from their mistakes and leave the throne empty?`
       },
-      {
-        heading: 'The Current Age: Age of Twilight',
-        content: `Three centuries have passed since the First Shadow War. The Order of the Dawn guards the Sacred Flame and maintains the seals on Vexmor's prison. But the seals are weakening.
-
-Shadows creep at the edges of the world. Corruption spreads through ancient forests. The dead stir in their graves. Vexmor's whispers reach the ambitious and desperate, promising power to those who would serve him.
-
-The heroes of this age must decide: Will they stand with the light? Embrace the darkness? Or seek a third path—the way of balance that the Twilight Covenant believes is the only true salvation?
-
-The final battle approaches. The fate of Ohloss hangs in the balance.`
-      }
     ]
   },
   villain: {

@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-brand">
         <NavLink to="/">
-          <span className="brand-icon">⚔</span>
+          <span className="brand-icon">⛰︎ ོ ༄</span>
           <span className="brand-text">Ohloss</span>
         </NavLink>
       </div>

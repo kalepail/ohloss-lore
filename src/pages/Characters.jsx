@@ -1,21 +1,26 @@
 import { useState } from 'react';
 import { characters } from '../data/characters';
-import { factions } from '../data/factions';
 import CharacterCard from '../components/CharacterCard';
 import './Characters.css';
+
+const mainFactions = ['gilded-fin', 'verdant-hollow', 'wobblestone-clan'];
 
 function Characters() {
   const [filter, setFilter] = useState('all');
 
   const filteredCharacters = filter === 'all'
     ? characters
+    : filter === 'other'
+    ? characters.filter(c => !mainFactions.includes(c.faction))
     : characters.filter(c => c.faction === filter);
 
   return (
     <div className="characters-page">
       <header className="page-header">
-        <h1>Characters</h1>
-        <p>Heroes, villains, and legends of Ohloss</p>
+        <div className="header-frame">
+          <h1>Characters</h1>
+          <p>Heroes, villains, and legends of Awen</p>
+        </div>
       </header>
 
       <div className="filter-bar">
@@ -25,16 +30,30 @@ function Characters() {
         >
           All
         </button>
-        {factions.map(faction => (
-          <button
-            key={faction.id}
-            className={`filter-btn ${filter === faction.id ? 'active' : ''}`}
-            onClick={() => setFilter(faction.id)}
-            style={{ '--faction-color': faction.color }}
-          >
-            {faction.name.split(' ').slice(-1)[0]}
-          </button>
-        ))}
+        <button
+          className={`filter-btn ${filter === 'gilded-fin' ? 'active' : ''}`}
+          onClick={() => setFilter('gilded-fin')}
+        >
+          Gilded Fin
+        </button>
+        <button
+          className={`filter-btn ${filter === 'verdant-hollow' ? 'active' : ''}`}
+          onClick={() => setFilter('verdant-hollow')}
+        >
+          Verdant Hollow
+        </button>
+        <button
+          className={`filter-btn ${filter === 'wobblestone-clan' ? 'active' : ''}`}
+          onClick={() => setFilter('wobblestone-clan')}
+        >
+          Wobblestone Clan
+        </button>
+        <button
+          className={`filter-btn ${filter === 'other' ? 'active' : ''}`}
+          onClick={() => setFilter('other')}
+        >
+          Other Characters
+        </button>
       </div>
 
       <div className="characters-grid">

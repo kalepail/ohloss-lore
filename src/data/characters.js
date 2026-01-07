@@ -1,88 +1,87 @@
+import boppyImage from '../assets/boppy-headshot.png';
+import boppyVideo from '../assets/boppy-fishbite-video.mp4';
+import kaelImage from '../assets/kael-headshot.png';
+import orrenImage from '../assets/orren-headshot.png';
+import orrenVideo from '../assets/orren-ash-video.mp4';
+import zebulitaImage from '../assets/zebulita-headshot.png';
+
 export const characters = [
   {
-    id: 'aelindra',
-    name: 'Aelindra the Lightbringer',
-    title: 'Guardian of the Sacred Flame',
-    faction: 'order-of-dawn',
-    role: 'Paladin',
-    image: null,
+    id: 'boppy-fishbite',
+    name: 'Boppy Fishbite',
+    title: 'Gilded Fin',
+    faction: 'gilded-fin',
+    role: 'Swashbuckler',
+    image: boppyImage,
+    video: boppyVideo,
+    mainAttribute: 'agility',
     stats: {
-      strength: 85,
-      agility: 60,
-      wisdom: 75,
-      charisma: 90
+      Charm: 80,
+      Swagger: 95,
+      Charisma: 60,
+      Tenacity: 70,
+      Guile: 90,
+      Subtlety: 5
     },
-    description: 'Once a humble temple guardian, Aelindra was chosen by the Sacred Flame during the Night of Shadows. Now she leads the Order of Dawn against the encroaching darkness.',
-    backstory: 'Born in the village of Solhaven, Aelindra showed an affinity for divine magic from a young age. When the shadow creatures attacked her village, she stood alone against them, and the Sacred Flame answered her prayer, transforming her into its chosen champion.',
-    abilities: ['Divine Shield', 'Radiant Strike', 'Beacon of Hope', 'Purifying Light']
+    description: 'Boppy has never told anyone about her past. Many men have asked. Not all of them have lived. Cross her on the dock, and you\'ll be darn sure to hear her, laughing, swaggering, pistols at the ready. Boppy\'s got that bright-eyed charm that makes people drop their guard… right before she drops them. If you catch her eye, you\'re about to get lucky or incredibly unlucky. And there ain\'t no in between.',
+    backstory: 'Growing up in the marshlands of the Gilded Fin, Boppy learned early that fortune favors the bold—and the fast. Now one of the delta\'s most notorious traders, Boppy moves goods, secrets, and occasionally people through routes only they know.',
+    abilities: ['Slippery Escape', 'Lucky Break', 'Fast Talk', 'Hidden Channels']
   },
   {
-    id: 'vexmor',
-    name: 'Vexmor the Undying',
-    title: 'Lord of the Obsidian Throne',
-    faction: 'shadow-dominion',
-    role: 'Necromancer',
-    image: null,
+    id: 'kael-coldhart',
+    name: 'Kael Coldhart',
+    title: 'Wobblestone Clan',
+    faction: 'wobblestone-clan',
+    role: 'Builder',
+    image: kaelImage,
+    mainAttribute: 'wisdom',
     stats: {
-      strength: 50,
-      agility: 45,
-      wisdom: 95,
-      charisma: 70
+      strength: 75,
+      agility: 50,
+      wisdom: 85,
+      charisma: 65
     },
-    description: 'The primary antagonist of Ohloss. Once a brilliant scholar seeking immortality, Vexmor made a pact with the Void and became its herald of destruction.',
-    backstory: 'Centuries ago, Vexmor was the greatest mage of the Arcanum Council. His obsession with defeating death led him to forbidden knowledge. When he opened the Void Gate, he became something neither living nor dead—an eternal vessel for darkness.',
-    abilities: ['Soul Harvest', 'Void Corruption', 'Raise Undead Legion', 'Eternal Darkness']
+    description: 'A master builder whose structures defy gravity and logic. Kael believes that with enough balance and creativity, anything can stand—even in the face of impossible odds.',
+    backstory: 'Raised among the precarious towers of the Wobblestone Clan, Kael discovered that stability comes not from rigidity, but from understanding how things move. Their impossible bridges and leaning spires have become legendary throughout Awen.',
+    abilities: ['Structural Insight', 'Steady Hands', 'Improvised Engineering', 'Stone Sense']
   },
   {
-    id: 'kira',
-    name: 'Kira Shadowstep',
-    title: 'Blade of the Twilight',
-    faction: 'twilight-covenant',
-    role: 'Assassin',
-    image: null,
+    id: 'orren-ash',
+    name: 'Orren Ash',
+    title: 'Verdant Hollow',
+    faction: 'verdant-hollow',
+    role: 'Dendrologist',
+    image: orrenImage,
+    video: orrenVideo,
+    mainAttribute: 'Insight',
     stats: {
-      strength: 55,
-      agility: 95,
-      wisdom: 65,
-      charisma: 50
+      Resilience: 75,
+      Insight: 90,
+      Photosynthesis: 100,
+      Camouflage: 85,
+      Flexibility: 5
     },
-    description: 'A mysterious rogue who walks the line between light and shadow. Her loyalties are questioned by all, but her blade has saved the realm more than once.',
-    backstory: 'Orphaned during the First Shadow War, Kira was raised by the Twilight Covenant—an order that believes balance, not victory, is the key to saving the world. She serves neither light nor dark, but the preservation of existence itself.',
-    abilities: ['Shadow Step', 'Venomous Strike', 'Cloak of Twilight', 'Fate\'s Edge']
+    description: 'Orren Ash was picking mushrooms one afternoon when he suddenly tripped into a tree. He was found several days later, and ever since, he\'s had bark for skin. Naturally, he did the only sensible thing: he moved into the Verdant Hollow conservatories and buried himself in research to figure out why the heck he now looks like a tree. The work is ongoing. In the meantime, Orren has discovered his new condition has perks: his skin is tough as nails (whatever that means), and anytime he\'s somewhere he doesn\'t want to be, he can just leaf.',
+    backstory: 'In the valley conservatories of the Verdant Hollow, Orren spent decades cataloging the histories of all three factions. When Zebulita seized power, Orren realized that memory itself had become a form of resistance.',
+    abilities: ['Perfect Recall', 'Ancient Wisdom', 'Story Weaving', 'Truth Seeing']
   },
   {
-    id: 'thornok',
-    name: 'Thornok Ironheart',
-    title: 'Warlord of the Mountain Clans',
-    faction: 'mountain-clans',
-    role: 'Berserker',
-    image: null,
+    id: 'zebulita',
+    name: 'Zebulita',
+    title: 'The Empress',
+    faction: 'villain',
+    role: 'Tyrant',
+    image: zebulitaImage,
+    mainAttribute: 'charisma',
     stats: {
-      strength: 95,
-      agility: 40,
-      wisdom: 55,
-      charisma: 75
-    },
-    description: 'A legendary warrior whose battle cry can be heard across valleys. Thornok united the warring mountain clans under one banner to face the shadow threat.',
-    backstory: 'The Mountain Clans fought each other for generations until Vexmor\'s forces invaded their sacred peaks. Thornok, then a young chieftain, single-handedly held the Pass of Bones for three days. His feat united the clans, who now follow him into any battle.',
-    abilities: ['Berserker Rage', 'Mountain\'s Fury', 'War Cry', 'Unbreakable Will']
-  },
-  {
-    id: 'seraphine',
-    name: 'Seraphine of the Verdant',
-    title: 'Voice of the Ancient Grove',
-    faction: 'verdant-circle',
-    role: 'Druid',
-    image: null,
-    stats: {
-      strength: 45,
+      strength: 60,
       agility: 70,
       wisdom: 90,
-      charisma: 80
+      charisma: 95
     },
-    description: 'The last of the Elder Druids, Seraphine communes with the land itself. The forests whisper secrets to her, and she commands nature\'s wrath against those who threaten balance.',
-    backstory: 'When the Shadow Blight began corrupting the ancient forests, the Elder Druids sacrificed themselves to create a barrier. Only Seraphine survived, inheriting their collective wisdom and burden. She now seeks to restore what was lost.',
-    abilities: ['Nature\'s Wrath', 'Healing Grove', 'Entangling Roots', 'Spirit of the Wild']
+    description: 'A diplomatic robot who charmed her way into controlling the realm. Behind her adorable exterior lies a calculating mind that has monopolized all faction points under her rule.',
+    backstory: 'Zebulita arrived in Awen as a small, cute diplomatic robot with chiming voice and warm, blinking eyes. The factions trusted her to organize the games fairly. By the time they realized their mistake, she had already declared herself Empress.',
+    abilities: ['Charming Facade', 'Political Manipulation', 'Faction Point Control', 'Adorable Deception']
   }
 ];
 

@@ -2,21 +2,20 @@ import { Link } from 'react-router-dom';
 import './CharacterCard.css';
 
 function CharacterCard({ character }) {
-  const { id, name, title, role, stats, description } = character;
+  const { id, name, title, role, stats, description, image, mainAttribute } = character;
 
-  const getHighestStat = () => {
-    const entries = Object.entries(stats);
-    return entries.reduce((max, curr) => curr[1] > max[1] ? curr : max);
-  };
-
-  const [topStat, topValue] = getHighestStat();
+  const mainStatValue = stats[mainAttribute];
 
   return (
     <Link to={`/characters/${id}`} className="character-card">
       <div className="character-portrait">
-        <div className="portrait-placeholder">
-          <span>{name.charAt(0)}</span>
-        </div>
+        {image ? (
+          <img src={image} alt={name} className="portrait-image" />
+        ) : (
+          <div className="portrait-placeholder">
+            <span>{name.charAt(0)}</span>
+          </div>
+        )}
       </div>
       <div className="character-info">
         <h3 className="character-name">{name}</h3>
@@ -24,11 +23,14 @@ function CharacterCard({ character }) {
         <span className="character-role">{role}</span>
         <p className="character-desc">{description.substring(0, 100)}...</p>
         <div className="character-stat">
-          <span className="stat-label">{topStat}</span>
-          <div className="stat-bar">
-            <div className="stat-fill" style={{ width: `${topValue}%` }}></div>
+          <span className="stat-header-label">Main Attribute</span>
+          <div className="stat-row">
+            <span className="stat-label">{mainAttribute}</span>
+            <div className="stat-bar">
+              <div className="stat-fill" style={{ width: `${mainStatValue}%` }}></div>
+            </div>
+            <span className="stat-value">{mainStatValue}</span>
           </div>
-          <span className="stat-value">{topValue}</span>
         </div>
       </div>
     </Link>

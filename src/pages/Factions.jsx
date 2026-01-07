@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { factions } from '../data/factions';
-import { getCharactersByFaction } from '../data/characters';
+import { characters } from '../data/characters';
 import './Factions.css';
 
 function Factions() {
@@ -21,70 +21,67 @@ function Factions() {
   return (
     <div className="factions-page">
       <header className="page-header">
-        <h1>Factions</h1>
-        <p>The powers that shape the fate of Ohloss</p>
+        <div className="header-frame">
+          <h1>Factions</h1>
+          <p>The powers that shape the fate of Awen</p>
+          <span className="frame-corners" aria-hidden="true"></span>
+        </div>
       </header>
 
       <div className="factions-list">
         {factions.map(faction => {
-          const members = getCharactersByFaction(faction.id);
+          const heroCharacterName = faction.heroCharacter || faction.hero;
+          const hero = characters.find(c => c.name === heroCharacterName);
           return (
             <article
               key={faction.id}
               id={faction.id}
               className="faction-card"
-              style={{ '--faction-color': faction.color }}
+              style={{
+                '--faction-color': faction.color,
+                backgroundImage: faction.backgroundImage ? `url(${faction.backgroundImage})` : 'none'
+              }}
             >
-              <div className="faction-header">
-                <div className="faction-icon" style={{ background: faction.color }}>
-                  {faction.icon || faction.name.charAt(0)}
-                </div>
-                <div className="faction-header-info">
-                  <span className="faction-alignment">{faction.alignment}</span>
-                  <h2>{faction.name}</h2>
-                  <p className="faction-motto">"{faction.motto}"</p>
-                </div>
-              </div>
-
-              <p className="faction-description">{faction.description}</p>
-
-              <div className="faction-details">
-                <div className="detail-item">
-                  <span className="detail-label">Headquarters</span>
-                  <span className="detail-value">{faction.headquarters}</span>
-                </div>
-                <div className="detail-item">
-                  <span className="detail-label">Leader</span>
-                  <span className="detail-value">{faction.leader}</span>
-                </div>
-              </div>
-
-              <div className="faction-history">
-                <h3>History</h3>
-                <p>{faction.history}</p>
-              </div>
-
-              <div className="faction-beliefs">
-                <h3>Core Beliefs</h3>
-                <ul>
-                  {faction.beliefs.map((belief, index) => (
-                    <li key={index}>{belief}</li>
-                  ))}
-                </ul>
-              </div>
-
-              {members.length > 0 && (
-                <div className="faction-members">
-                  <h3>Notable Members</h3>
-                  <div className="members-list">
-                    {members.map(member => (
-                      <span key={member.id} className="member-tag">
-                        {member.name.split(' ')[0]}
-                      </span>
-                    ))}
-                  </div>
+              {faction.repsImage && (
+                <div className="faction-reps">
+                  <img src={faction.repsImage} alt={`${faction.name} representatives`} />
                 </div>
               )}
+              <div className="faction-content">
+                <div className="faction-header">
+                  <div className="faction-header-info">
+                    <h2>{faction.name}</h2>
+                    <p className="faction-motto">"{faction.motto}"</p>
+                  </div>
+                </div>
+
+                <div className="faction-details">
+                  <div className="detail-item">
+                    <span className="detail-label">Domain</span>
+                    <span className="detail-value">{faction.domain}</span>
+                  </div>
+                  <div className="detail-item">
+                    <span className="detail-label">Values</span>
+                    <span className="detail-value">{faction.values}</span>
+                  </div>
+                  <div className="detail-item">
+                    <span className="detail-label">Lifestyle</span>
+                    <span className="detail-value">{faction.lifestyle}</span>
+                  </div>
+                  <div className="detail-item">
+                    <span className="detail-label">Hero</span>
+                    <span className="detail-value">
+                      {hero ? (
+                        <Link to={`/characters/${hero.id}`} className="hero-link">
+                          {faction.hero}
+                        </Link>
+                      ) : (
+                        faction.hero
+                      )}
+                    </span>
+                  </div>
+                </div>
+              </div>
             </article>
           );
         })}

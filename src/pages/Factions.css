@@ -1,5 +1,5 @@
 .factions-page {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -8,16 +8,77 @@
   margin-bottom: 3rem;
 }
 
-.page-header h1 {
+.header-frame {
+  background: linear-gradient(135deg, #1e142d 0%, #140a1e 100%);
+  padding: 2rem 3rem;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  border: 4px solid var(--color-gold);
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(201, 162, 39, 0.2);
+}
+
+/* Top corner decorations */
+.header-frame::before,
+.header-frame::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--color-gold);
+}
+
+.header-frame::before {
+  top: 8px;
+  left: 8px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.header-frame::after {
+  top: 8px;
+  right: 8px;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* Bottom corners */
+.header-frame .frame-corners::before,
+.header-frame .frame-corners::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--color-gold);
+}
+
+.header-frame .frame-corners::before {
+  bottom: 8px;
+  left: 8px;
+  border-right: none;
+  border-top: none;
+}
+
+.header-frame .frame-corners::after {
+  bottom: 8px;
+  right: 8px;
+  border-left: none;
+  border-top: none;
+}
+
+.header-frame h1 {
   font-size: 2.5rem;
   color: var(--color-gold);
   font-family: 'Georgia', serif;
   margin: 0 0 0.5rem 0;
 }
 
-.page-header p {
+.header-frame p {
   color: var(--color-text-muted);
   font-style: italic;
+  margin: 0;
 }
 
 .factions-list {
@@ -27,11 +88,35 @@
 }
 
 .faction-card {
+  display: flex;
+  gap: 1.5rem;
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(30, 20, 45, 0.8) 0%, rgba(20, 10, 30, 0.9) 100%);
+  background-color: rgba(30, 20, 45, 0.9);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-left: 4px solid var(--faction-color, var(--color-gold));
   border-radius: 8px;
+}
+
+.faction-reps {
+  flex-shrink: 0;
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.faction-reps img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid var(--color-gold);
+  opacity: 1;
+}
+
+.faction-content {
+  flex: 1;
 }
 
 .faction-header {
@@ -89,9 +174,9 @@
 }
 
 .faction-details {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 6px;
@@ -113,6 +198,17 @@
 .detail-value {
   color: var(--color-gold);
   font-weight: 500;
+}
+
+.hero-link {
+  color: var(--color-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hero-link:hover {
+  color: var(--color-gold-light);
+  text-decoration: underline;
 }
 
 .faction-history,
@@ -174,6 +270,16 @@
 }
 
 @media (max-width: 768px) {
+  .faction-card {
+    flex-direction: column;
+  }
+
+  .faction-reps {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
   .faction-header {
     flex-direction: column;
     align-items: center;
@@ -181,7 +287,7 @@
   }
 
   .faction-details {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 

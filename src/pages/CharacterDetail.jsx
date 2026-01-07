@@ -24,36 +24,36 @@ function CharacterDetail() {
       <Link to="/characters" className="back-link">← Back to Characters</Link>
 
       <header className="character-header">
-        <div className="character-portrait-large">
-          <div className="portrait-placeholder-large">
-            <span>{character.name.charAt(0)}</span>
+        <span className="header-corners" aria-hidden="true"></span>
+        <div className="header-top">
+          <div className="character-portrait-large">
+            {character.image ? (
+              <img src={character.image} alt={character.name} className="portrait-image-large" />
+            ) : (
+              <div className="portrait-placeholder-large">
+                <span>{character.name.charAt(0)}</span>
+              </div>
+            )}
+          </div>
+          <div className="character-header-info">
+            <span className="character-role-badge">{character.role}</span>
+            <h1>{character.name}</h1>
+            <p className="character-title-large">{character.title}</p>
           </div>
         </div>
-        <div className="character-header-info">
-          <span className="character-role-badge">{character.role}</span>
-          <h1>{character.name}</h1>
-          <p className="character-title-large">{character.title}</p>
-          {faction && (
-            <Link
-              to="/factions"
-              className="faction-badge"
-              style={{ borderColor: faction.color, color: faction.color }}
-            >
-              {faction.name}
-            </Link>
-          )}
-        </div>
+        {character.video && (
+          <video controls className="character-video">
+            <source src={character.video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
       </header>
 
       <div className="character-content">
+
         <section className="content-section">
           <h2>About</h2>
           <p>{character.description}</p>
-        </section>
-
-        <section className="content-section">
-          <h2>Backstory</h2>
-          <p>{character.backstory}</p>
         </section>
 
         <section className="content-section stats-section">

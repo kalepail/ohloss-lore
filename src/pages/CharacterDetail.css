@@ -5,14 +5,14 @@
 
 .back-link {
   display: inline-block;
-  color: var(--color-text-muted);
+  color: #000;
   text-decoration: none;
   margin-bottom: 2rem;
   transition: color 0.3s ease;
 }
 
 .back-link:hover {
-  color: var(--color-gold);
+  color: var(--color-purple);
 }
 
 .not-found {
@@ -32,12 +32,79 @@
 
 .character-header {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
   margin-bottom: 3rem;
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(30, 20, 45, 0.8) 0%, rgba(20, 10, 30, 0.9) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 12px;
+  background: linear-gradient(135deg, #1e142d 0%, #140a1e 100%);
+  border: 4px solid var(--color-gold);
+  border-radius: 8px;
+  position: relative;
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(201, 162, 39, 0.2);
+}
+
+.header-top {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Top corner decorations */
+.character-header::before,
+.character-header::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--color-gold);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.character-header::before {
+  top: 8px;
+  left: 8px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.character-header::after {
+  top: 8px;
+  right: 8px;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* Bottom corner decorations */
+.header-corners::before,
+.header-corners::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--color-gold);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.header-corners::before {
+  bottom: 8px;
+  left: 8px;
+  border-right: none;
+  border-top: none;
+}
+
+.header-corners::after {
+  bottom: 8px;
+  right: 8px;
+  border-left: none;
+  border-top: none;
+}
+
+.character-header .character-video {
+  width: 100%;
+  border-radius: 4px;
 }
 
 .character-portrait-large {
@@ -61,6 +128,16 @@
   color: var(--color-gold);
   font-weight: bold;
   font-family: 'Georgia', serif;
+}
+
+.portrait-image-large {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 4px solid var(--color-gold);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  background: #1e142d;
 }
 
 .character-header-info {
@@ -95,6 +172,77 @@
   margin: 0 0 1rem 0;
 }
 
+.video-section {
+  padding: 0;
+}
+
+.video-frame {
+  position: relative;
+  border: 4px solid var(--color-gold);
+  border-radius: 8px;
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(201, 162, 39, 0.2);
+  overflow: hidden;
+}
+
+/* Ornate corner decorations */
+.video-frame::before,
+.video-frame::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--color-gold);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.video-frame::before {
+  top: 6px;
+  left: 6px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.video-frame::after {
+  top: 6px;
+  right: 6px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.character-video {
+  width: 100%;
+  display: block;
+}
+
+/* Bottom corners */
+.frame-corners::before,
+.frame-corners::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--color-gold);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.frame-corners::before {
+  bottom: 6px;
+  left: 6px;
+  border-right: none;
+  border-top: none;
+}
+
+.frame-corners::after {
+  bottom: 6px;
+  right: 6px;
+  border-left: none;
+  border-top: none;
+}
+
 .faction-badge {
   display: inline-block;
   width: fit-content;
@@ -118,7 +266,7 @@
 
 .content-section {
   padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(30, 20, 45, 0.5) 0%, rgba(20, 10, 30, 0.7) 100%);
+  background: linear-gradient(135deg, #1e142d 0%, #140a1e 100%);
   border-left: 3px solid var(--color-gold);
   border-radius: 0 8px 8px 0;
 }
@@ -182,6 +330,19 @@
   background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-gold) 100%);
   border-radius: 4px;
   transition: width 0.5s ease;
+}
+
+.video-section {
+  padding: 0;
+  overflow: hidden;
+  border-left: none;
+  border-radius: 8px;
+}
+
+.character-video {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
 }
 
 .abilities-list {
