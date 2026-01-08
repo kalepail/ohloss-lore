@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { factions } from '../data/factions';
 import { characters } from '../data/characters';
+import awenTrailer from '../assets/awen-trailer.mp4';
 import './Factions.css';
 
 function Factions() {
@@ -27,6 +28,12 @@ function Factions() {
           <span className="frame-corners" aria-hidden="true"></span>
         </div>
       </header>
+
+      <div className="trailer-section">
+        <video controls className="trailer-video">
+          <source src={awenTrailer} type="video/mp4" />
+        </video>
+      </div>
 
       <div className="factions-list">
         {factions.map(faction => {

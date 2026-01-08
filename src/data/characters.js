@@ -1,9 +1,11 @@
 import boppyImage from '../assets/boppy-headshot.png';
-import boppyVideo from '../assets/boppy-fishbite-video.mp4';
+import boppyVideo from '../assets/boppy-fishbite.mp4';
 import kaelImage from '../assets/kael-headshot.png';
+import kaelVideo from '../assets/kael-coldhart.mp4';
 import orrenImage from '../assets/orren-headshot.png';
 import orrenVideo from '../assets/orren-ash-video.mp4';
 import zebulitaImage from '../assets/zebulita-headshot.png';
+import zebulitaVideo from '../assets/zebulita.mp4';
 
 export const characters = [
   {
@@ -14,7 +16,7 @@ export const characters = [
     role: 'Swashbuckler',
     image: boppyImage,
     video: boppyVideo,
-    mainAttribute: 'agility',
+    mainAttribute: 'Swagger',
     stats: {
       Charm: 80,
       Swagger: 95,
@@ -32,16 +34,19 @@ export const characters = [
     name: 'Kael Coldhart',
     title: 'Wobblestone Clan',
     faction: 'wobblestone-clan',
-    role: 'Builder',
+    role: 'Staffmaster',
     image: kaelImage,
-    mainAttribute: 'wisdom',
+    video: kaelVideo,
+    mainAttribute: 'Discipline',
     stats: {
-      strength: 75,
-      agility: 50,
-      wisdom: 85,
-      charisma: 65
+      Discipline: 100,
+      Craft: 95,
+      Balance: 75,
+      Resolve: 80,
+      Whimsy: 0,
+      Pride: 90
     },
-    description: 'A master builder whose structures defy gravity and logic. Kael believes that with enough balance and creativity, anything can stand—even in the face of impossible odds.',
+    description: 'Kael Coldhart was an orphan taken in by the monks at the monastery of the Wobblestone Clan. He had crawled to the mountain settlement through the snow all alone after his parents tragically passed away in a tragic accidental avalanche accident. The monks taught him much in the ways of the staff and of the mind. And he\'s trained all his life. He may look really freaking old, but he is the best warrior the Wobblestone Clan\'s got.',
     backstory: 'Raised among the precarious towers of the Wobblestone Clan, Kael discovered that stability comes not from rigidity, but from understanding how things move. Their impossible bridges and leaning spires have become legendary throughout Awen.',
     abilities: ['Structural Insight', 'Steady Hands', 'Improvised Engineering', 'Stone Sense']
   },
@@ -72,14 +77,17 @@ export const characters = [
     faction: 'villain',
     role: 'Tyrant',
     image: zebulitaImage,
-    mainAttribute: 'charisma',
+    video: zebulitaVideo,
+    mainAttribute: 'Charm',
     stats: {
-      strength: 60,
-      agility: 70,
-      wisdom: 90,
-      charisma: 95
+      Charm: 100,
+      Manipulation: 95,
+      Control: 90,
+      Calculation: 85,
+      Persistence: 80,
+      Cuteness: 100
     },
-    description: 'A diplomatic robot who charmed her way into controlling the realm. Behind her adorable exterior lies a calculating mind that has monopolized all faction points under her rule.',
+    description: 'Zebulita hails from the planet Tharaxis, where she lived and flourished alongside her infamous cousin, Zebulon. However, instead of earning power through force, she learned to use her cuteness and charm.\n\nShe arrived in Awen as a diplomatic robot: small, adorable, and perfectly sweet. Leaders trusted her. People adored her. Even the Wobblestone elders were charmed.\n\nBut that was the trap.\n\nZebulita offered to bring fairness and peace to Awen. But instead, she grabbed power and declared herself Empress.\n\nBy the time the clans realized, it was too late.\n\nZebulita was never harmless.\n\nShe only played the part long enough to win.',
     backstory: 'Zebulita arrived in Awen as a small, cute diplomatic robot with chiming voice and warm, blinking eyes. The factions trusted her to organize the games fairly. By the time they realized their mistake, she had already declared herself Empress.',
     abilities: ['Charming Facade', 'Political Manipulation', 'Faction Point Control', 'Adorable Deception']
   }

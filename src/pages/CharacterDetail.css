@@ -3,16 +3,16 @@
   margin: 0 auto;
 }
 
-.back-link {
+.character-detail .back-link {
   display: inline-block;
-  color: #000;
+  color: #000 !important;
   text-decoration: none;
   margin-bottom: 2rem;
   transition: color 0.3s ease;
 }
 
-.back-link:hover {
-  color: var(--color-purple);
+.character-detail .back-link:hover {
+  color: var(--color-purple) !important;
 }
 
 .not-found {

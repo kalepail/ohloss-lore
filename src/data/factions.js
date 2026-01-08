@@ -42,7 +42,7 @@ export const factions = [
     domain: 'Mist-wreathed mountains',
     values: 'Harmony, balance, and discipline',
     lifestyle: 'High ridges and stone terraces crafted by generations of builders',
-    hero: '',
+    hero: 'The Stonecrane',
     heroCharacter: 'Kael Coldhart',
     color: '#d2691e',
     backgroundImage: wobblestoneBg,
