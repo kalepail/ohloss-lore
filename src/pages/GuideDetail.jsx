@@ -6,25 +6,55 @@ function GuideDetail() {
   const { id } = useParams();
   const guide = getGuideById(id);
 
-  // Parse markdown-style links [text](url) into React elements
-  const parseLinks = (text) => {
-    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  // Parse markdown-style formatting into React elements
+  const parseText = (text) => {
+    // Combined regex for links, inline code, and bold
+    const combinedRegex = /\[([^\]]+)\]\(([^)]+)\)|`([^`]+)`|\*\*([^*]+)\*\*/g;
     const parts = [];
     let lastIndex = 0;
     let match;
 
-    while ((match = linkRegex.exec(text)) !== null) {
-      // Add text before the link
+    while ((match = combinedRegex.exec(text)) !== null) {
+      // Add text before the match
       if (match.index > lastIndex) {
         parts.push(text.substring(lastIndex, match.index));
       }
-      // Add the link
-      const [, linkText, url] = match;
-      parts.push(
-        <Link key={match.index} to={url} className="guide-link">
-          {linkText}
-        </Link>
-      );
+
+      if (match[1] && match[2]) {
+        // Link: [text](url)
+        const linkText = match[1];
+        const url = match[2];
+        const isExternal = url.startsWith('http://') || url.startsWith('https://');
+
+        if (isExternal) {
+          parts.push(
+            <a key={match.index} href={url} className="guide-link" target="_blank" rel="noopener noreferrer">
+              {linkText}
+            </a>
+          );
+        } else {
+          parts.push(
+            <Link key={match.index} to={url} className="guide-link">
+              {linkText}
+            </Link>
+          );
+        }
+      } else if (match[3]) {
+        // Inline code: `code`
+        parts.push(
+          <code key={match.index} className="inline-code">
+            {match[3]}
+          </code>
+        );
+      } else if (match[4]) {
+        // Bold: **text**
+        parts.push(
+          <strong key={match.index}>
+            {match[4]}
+          </strong>
+        );
+      }
+
       lastIndex = match.index + match[0].length;
     }
 
@@ -35,6 +65,9 @@ function GuideDetail() {
 
     return parts.length > 0 ? parts : text;
   };
+
+  // Alias for backward compatibility
+  const parseLinks = parseText;
 
   if (!guide) {
     return (
@@ -75,6 +108,10 @@ function GuideDetail() {
                             <strong>{parts[1]}</strong>{parseLinks(parts[2])}
                           </p>
                         );
+                      }
+                      if (line.startsWith('    - ') || line.startsWith('  - ')) {
+                        const indent = line.startsWith('    - ') ? 4 : 2;
+                        return <li key={lIndex} className="nested-item">{parseLinks(line.substring(indent + 2))}</li>;
                       }
                       if (line.startsWith('- ')) {
                         return <li key={lIndex}>{parseLinks(line.substring(2))}</li>;

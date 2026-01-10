@@ -17,7 +17,7 @@ To deposit USDC into the vault, you'll need a classic Stellar account and some U
         heading: '1. Create a Stellar account',
         content: `If you don't already have one, create a G-address (a classic Stellar account).
 
-We recommend using Freighter, which makes account creation and signing transactions quick and painless.`
+We recommend using [Freighter](https://www.freighter.app/), which makes account creation and signing transactions quick and painless.`
       },
       {
         heading: '2. Acquire USDC',
@@ -70,10 +70,10 @@ Build your game your way–it will probably be harder than you expect, but that 
 - The game must be fully functional and live on Mainnet
 - The game must be hosted on its own website
 - The game must report three pieces of information to Ohloss:
-  - Who is playing (reported in \`start_game\`)
-  - How many faction points each player wagered (reported in \`start_game\`)
-  - Who won and who lost (reported in \`end_game\`)
-- TRUE FOR HACKATHON, NOT OHLOSS IN GENERAL: The game must use zero-knowledge proofs in its smart contract logic when determining the winner and loser`
+    - Who is playing (reported in \`start_game\`)
+    - How many faction points each player wagered (reported in \`start_game\`)
+    - Who won and who lost (reported in \`end_game\`)
+- **Note:** this rule is true for the Hackathon, but not Ohloss in general. The game must use zero-knowledge proofs in its smart contract logic when determining the winner and loser`
       },
       {
         heading: 'Review and Approval',
@@ -106,7 +106,7 @@ You can view your eligible rewards and additional details by selecting "I Am A D
     sections: [
       {
         heading: 'Intro',
-        content: `Ohloss is the portal to games and lore: a game developer agency, rather than a game itself.`
+        content: `[Ohloss](https://ohloss.com) is the portal to games and lore: a game developer agency, rather than a game itself.`
       },
       {
         heading: 'How to Play',
@@ -131,8 +131,8 @@ Read more about how your deposit amount and deposit duration affect faction poin
       {
         heading: 'Playing Games',
         content: `To start a new game:
-1. Navigate to the Games tab
-2. Select the game you'd like to play
+- Navigate to the Games tab
+- Select the game you'd like to play
 
 To join a game someone else has started:
 - Enter the session ID for the existing game

@@ -10,9 +10,9 @@ function Footer() {
         </div>
         <p className="footer-tagline">Play the games. Take the power.</p>
         <div className="footer-links">
-          <a href="#about">Ohloss Account</a>
+          <a href="https://ohloss.com" target="_blank" rel="noopener noreferrer">Ohloss Account</a>
           <a href="#contact">GitHub</a>
-          <a href="#credits">Discord</a>
+          <a href="https://discord.gg/J4fhKpNUrQ" target="_blank" rel="noopener noreferrer">Discord</a>
         </div>
         <p className="footer-copyright">
           &copy; {new Date().getFullYear()} Ohloss. All rights reserved.
