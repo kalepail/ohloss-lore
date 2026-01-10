@@ -25,7 +25,9 @@ We recommend using [Freighter](https://www.freighter.app/), which makes account 
 - Purchasing USDC from an exchange that supports Stellar, or
 - Receiving USDC from another Stellar account
 
-Make sure the USDC you acquire is issued on the Stellar network.`
+Make sure the USDC you acquire is issued on the Stellar network.
+
+**Note:** You can also send XLM to your Ohloss account and transfer it to USDC on the Ohloss website.`
       },
       {
         heading: '3. Send USDC to your Ohloss account',
