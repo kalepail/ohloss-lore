@@ -1,16 +1,96 @@
-# React + Vite
+# Ohloss — Lore & Worldbuilding
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Ohloss, a living fantasy world built around games, power, and the systems that shape who gets to rule the realm of Awen.
 
-Currently, two official plugins are available:
+This repository contains the official lore, factions, characters, narrative foundations, and gameplay guides for the Ohloss universe.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## The World of Awen
 
-## React Compiler
+Awen is a realm once held together by shared games and shared power.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+At the heart of Awen are faction points — a finite form of power created through competition, creativity, and contest. For generations, the people of Awen played a single, open game to earn them. Victory strengthened clans, enriched lands, and kept the realm in balance.
 
-## Expanding the ESLint configuration
+Then came Empress Zebulita.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Disguised as a harmless diplomatic service robot, Zebulita promised fairness. She centralized the game. She standardized the ledgers. She locked the vault.
+
+Now, faction points flow only where she allows.
+
+In response, the people of Awen began creating their own games — in taverns, libraries, marketplaces, and back alleys — quietly generating new faction points beyond Zebulita's control.
+
+The games are back.
+The power is moving again.
+And the throne is no longer secure.
+
+## The Factions
+
+### Gilded Fin
+
+River-delta daredevils who thrive on luck, audacity, and risk.
+Smugglers, traders, pirates, and gamblers who believe chance favors the bold.
+
+**Hero:** Luck Fish
+**Motto:** "I've got an idea, and a very fast ship."
+
+### Wobblestone Clan
+
+Mountain-born builders, stonemasons, and horsemasters who value balance, discipline, and craft.
+Their strength comes from preparation, coordination, and things that endure.
+
+**Hero:** Stonecrane
+**Motto:** "Stone doesn't bend. Neither do we."
+
+### Verdant Hollow
+
+Historians, archivists, and keepers of living memory.
+They believe knowledge is power — especially the kind that grows, adapts, and survives.
+
+**Hero:** Maestro Noteleaf
+**Motto:** "Peace is our preference. But not our position."
+
+## The Empress
+
+Zebulita did not seize power through force.
+She won it through charm, calculation, and control.
+
+Every kindness is a strategy.
+Every rule is a trap.
+
+## What This Repository Contains
+
+- World lore (Awen, faction points, the rise of Zebulita)
+- Faction profiles and philosophies
+- Hero and character write-ups
+- Narrative framing for games and events
+- Tone, themes, and narrative rules for future expansion
+- Guides for playing games, building games, and more
+
+This repo is the source of truth for Ohloss storytelling.
+
+## Design Philosophy
+
+Ohloss is built around a few core ideas:
+
+- Power is created through competing in games
+- Games shape societies
+
+The lore is designed to support modularity, play, and interpretation, not rigid canon.
+
+## Ohloss.com
+
+https://ohloss.com is where players:
+
+- Create and manage their Ohloss accounts
+
+- Choose a faction
+
+- Participate in games to earn faction points
+
+- Explore the evolving state of the realm
+
+## Final Note
+
+Ohloss is not a static story.
+It's a framework for stories that emerge through play.
+
+The games continue.
