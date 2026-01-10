@@ -32,7 +32,7 @@ export const characters = [
   {
     id: 'kael-coldhart',
     name: 'Kael Coldhart',
-    title: 'Wobblestone Clan',
+    title: 'Wobblestone',
     faction: 'wobblestone-clan',
     role: 'Staffmaster',
     image: kaelImage,
@@ -46,8 +46,8 @@ export const characters = [
       Whimsy: 0,
       Pride: 90
     },
-    description: 'Kael Coldhart was an orphan taken in by the monks at the monastery of the Wobblestone Clan. He had crawled to the mountain settlement through the snow all alone after his parents tragically passed away in a tragic accidental avalanche accident. The monks taught him much in the ways of the staff and of the mind. And he\'s trained all his life. He may look really freaking old, but he is the best warrior the Wobblestone Clan\'s got.',
-    backstory: 'Raised among the precarious towers of the Wobblestone Clan, Kael discovered that stability comes not from rigidity, but from understanding how things move. Their impossible bridges and leaning spires have become legendary throughout Awen.',
+    description: 'Kael Coldhart was an orphan taken in by the monks at the monastery of the Wobblestone. He had crawled to the mountain settlement through the snow all alone after his parents tragically passed away in a tragic accidental avalanche accident. The monks taught him much in the ways of the staff and of the mind. And he\'s trained all his life. He may look really freaking old, but he is the best warrior the Wobblestone\'s got.',
+    backstory: 'Raised among the precarious towers of the Wobblestone, Kael discovered that stability comes not from rigidity, but from understanding how things move. Their impossible bridges and leaning spires have become legendary throughout Awen.',
     abilities: ['Structural Insight', 'Steady Hands', 'Improvised Engineering', 'Stone Sense']
   },
   {

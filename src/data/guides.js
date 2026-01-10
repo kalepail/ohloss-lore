@@ -1,168 +1,82 @@
 export const guides = [
   {
-    id: 'getting-started',
-    title: 'Getting Started',
-    category: 'Basics',
-    description: 'Everything you need to know to begin your journey in Ohloss.',
+    id: 'get-usdc',
+    title: 'Get USDC in your Ohloss Account',
+    category: 'Getting Started',
+    description: 'Learn how to fund your Ohloss account with USDC to start playing.',
     sections: [
       {
-        heading: 'Welcome to Ohloss',
-        content: `Welcome, adventurer! Ohloss is a world of light and shadow, where your choices shape the fate of nations. This guide will help you take your first steps into this epic fantasy world.`
+        heading: 'What is USDC?',
+        content: `USDC is a digital dollar that you'll use to participate in Ohloss games. It's stable, secure, and easy to use.`
       },
       {
-        heading: 'Choosing Your Path',
-        content: `When you begin, you'll choose one of five character roles:
+        heading: 'Setting Up Your Account',
+        content: `Before you can add USDC, you'll need to create your Ohloss account. Follow these steps:
 
-**Paladin** - Holy warriors who wield divine light. High defense and support abilities.
-
-**Necromancer** - Masters of dark magic. Can raise undead and drain life force.
-
-**Assassin** - Swift and deadly. Excel at single-target damage and stealth.
-
-**Berserker** - Powerful melee fighters. High damage but lower defense.
-
-**Druid** - Nature magic users. Versatile healers and damage dealers.
-
-Each role can align with any faction, creating unique story paths and abilities.`
+1. Visit the Ohloss platform
+2. Connect your wallet or create a new one
+3. Complete account verification`
       },
       {
-        heading: 'Faction Alignment',
-        content: `Your faction determines your allies, enemies, and ultimate goals:
+        heading: 'Adding USDC',
+        content: `Once your account is set up, you can add USDC in several ways:
 
-**Order of the Dawn** - Fight for the light. Access to holy abilities and Sunspire.
-
-**Shadow Dominion** - Embrace darkness. Unlock necromancy and the Obsidian Citadel.
-
-**Twilight Covenant** - Walk between worlds. Unique balanced abilities.
-
-**Mountain Clans** - Honor and strength. Powerful physical bonuses.
-
-**Verdant Circle** - Protect nature. Enhanced druidic magic.
-
-You can change factions later, but it comes at a cost.`
+- Transfer from an existing wallet
+- Purchase directly through our platform
+- Receive from another Ohloss player`
       }
     ]
   },
   {
-    id: 'combat-guide',
-    title: 'Combat System',
-    category: 'Gameplay',
-    description: 'Master the art of battle in Ohloss.',
+    id: 'build-games',
+    title: 'Build the Games',
+    category: 'Creators',
+    description: 'Create your own games and earn faction points for your clan.',
     sections: [
       {
-        heading: 'Basic Combat',
-        content: `Combat in Ohloss is turn-based with action points. Each turn, you have 3 action points to spend on:
-
-- **Basic attacks** (1 AP)
-- **Abilities** (1-3 AP depending on power)
-- **Items** (1 AP)
-- **Movement** (1 AP per zone)
-
-Strategic positioning and ability combinations are key to victory.`
+        heading: 'Why Build Games?',
+        content: `In Awen, any competition can generate faction points. By building games, you help your faction grow stronger while creating fun experiences for everyone.`
       },
       {
-        heading: 'The Light/Shadow Meter',
-        content: `A unique mechanic in Ohloss is the Light/Shadow meter. Actions aligned with light or dark shift your meter, unlocking different abilities:
+        heading: 'Game Requirements',
+        content: `All games must meet these basic requirements:
 
-**Full Light** - Access to powerful holy abilities but locked out of shadow magic.
-
-**Full Shadow** - Devastating dark powers but holy magic damages you.
-
-**Balanced** - Access to Twilight abilities that combine both forces.
-
-The meter adds strategic depth—sometimes embracing darkness temporarily is the path to victory.`
+- Clear rules that determine a winner
+- Fair competition between participants
+- Proper faction point distribution`
       },
       {
-        heading: 'Boss Battles',
-        content: `Major story bosses have multiple phases and unique mechanics:
+        heading: 'Submitting Your Game',
+        content: `Ready to submit your game? Here's what you need:
 
-- **Phase 1**: Learn the boss's patterns
-- **Phase 2**: Boss gains new abilities at 50% health
-- **Phase 3**: Desperate final attacks below 25%
-
-Each faction has different strategies for major bosses. The Twilight path often reveals hidden weaknesses others miss.`
+1. A complete game design document
+2. Testing results showing fairness
+3. Faction sponsorship (optional but recommended)`
       }
     ]
   },
   {
-    id: 'world-exploration',
-    title: 'Exploring the World',
-    category: 'Gameplay',
-    description: 'Discover the secrets hidden throughout Ohloss.',
+    id: 'play-games',
+    title: 'Play the Games',
+    category: 'Players',
+    description: 'Join competitions, earn faction points, and help your clan rise to power.',
     sections: [
       {
-        heading: 'Major Regions',
-        content: `Ohloss contains five major regions:
-
-**The Sunlit Lands** - Order of Dawn territory. Rolling hills and golden fields.
-
-**The Shadowmere** - Corrupted lands near the Obsidian Citadel. Dangerous but rich in dark materials.
-
-**The Twilight Expanse** - Contested territory where light and shadow meet.
-
-**The Northern Peaks** - Mountain Clan homeland. Harsh but honorable.
-
-**The Ancient Groves** - Verdant Circle sanctuary. Lush forests with ancient secrets.`
+        heading: 'Finding Games',
+        content: `Games are happening all across Awen—in taverns, marketplaces, and hidden corners. Browse the game listings to find competitions that match your skills and interests.`
       },
       {
-        heading: 'Hidden Locations',
-        content: `Throughout Ohloss, secret areas await discovery:
+        heading: 'Joining a Competition',
+        content: `To join a game:
 
-- **Lost temples** containing forgotten lore
-- **Hidden caves** with rare materials
-- **Ancient battlefields** haunted by echoes of the past
-- **Faction sanctuaries** accessible only to members
-
-Exploration is rewarded with unique items, story fragments, and powerful abilities.`
+1. Select a game from the listings
+2. Pay the entry fee (if required)
+3. Choose which faction receives your points
+4. Play and compete!`
       },
       {
-        heading: 'Fast Travel',
-        content: `Once discovered, major locations can be fast-traveled to using Waystone Crystals. Each faction maintains their own Waystone network:
-
-- Light faction stones glow golden
-- Dark faction stones pulse purple
-- Neutral stones shimmer grey
-
-Twilight Covenant members can use any Waystone regardless of alignment.`
-      }
-    ]
-  },
-  {
-    id: 'crafting-guide',
-    title: 'Crafting System',
-    category: 'Systems',
-    description: 'Create powerful equipment and consumables.',
-    sections: [
-      {
-        heading: 'Gathering Materials',
-        content: `Materials are found throughout Ohloss:
-
-**Common**: Found everywhere, used for basic items
-**Uncommon**: Region-specific, moderate equipment
-**Rare**: Boss drops and hidden locations, powerful gear
-**Legendary**: Unique sources, faction-specific artifacts
-
-Your faction alignment affects which rare materials you can safely gather.`
-      },
-      {
-        heading: 'Crafting Stations',
-        content: `Each faction headquarters has specialized crafting:
-
-**Sunspire Forge** - Holy weapons and armor
-**Obsidian Crucible** - Dark artifacts and corrupted gear
-**Twilight Loom** - Balanced equipment with unique properties
-**Mountain Anvil** - Heavy armor and mighty weapons
-**Grove Sanctuary** - Nature-infused items and potions`
-      },
-      {
-        heading: 'Enchanting',
-        content: `Equipment can be enhanced with light or shadow essence:
-
-- Light enchants add holy damage and protection
-- Shadow enchants add life drain and corruption effects
-- Twilight enchants (rare) add balanced bonuses
-
-Heavy enchanting shifts your Light/Shadow meter, so plan carefully.`
+        heading: 'Earning Faction Points',
+        content: `When you win, your chosen faction earns points. The more you play and win, the stronger your faction becomes. Remember: every point brings your clan closer to challenging Empress Zebulita.`
       }
     ]
   }

@@ -5,7 +5,7 @@ export const lore = {
         heading: 'In the Beginning',
         content: `In the land of Awen, three main societies shape the world. 
 
-The Gilded Fin dwell in the river delta and marshlands and thrive as a bustling trade hub and haven of mischief. They value courage, luck, audacity, and a little chaos. The Wobblestone Clan resides in the mist-wreathed mountains, their high ridges and stone terraces crafted by generations of builders and stonemasons who prize harmony, balance, and discipline. In the lush valley conservatories lies Verdant Hollow, home to historians and chroniclers, a people who hold memory, history, the senses, and the art of storytelling in the highest regard.
+The Gilded Fin dwell in the river delta and marshlands and thrive as a bustling trade hub and haven of mischief. They value courage, luck, audacity, and a little chaos. Wobblestone resides in the mist-wreathed mountains, their high ridges and stone terraces crafted by generations of builders and stonemasons who prize harmony, balance, and discipline. In the lush valley conservatories lies Verdant Hollow, home to historians and chroniclers, a people who hold memory, history, the senses, and the art of storytelling in the highest regard.
 
 Long ago, these clans were distinct, but not divided. Travelers moved freely between valleys, mountains, and deltas. Builders drank ale beside smugglers; archivists debated sailors. They were bound together in a shared system of power. 
 `
@@ -22,7 +22,7 @@ Each faction accepted the outcome of the game, and faction points flowed through
 
 Which is where Zebulita came in. Zebulita did not take power through strength or force. She took it through cuteness and charm, which turned out to be far more dangerous. 
 
-She arrived in Awen as a diplomatic robot, small and adorable. Her voice chimed like bells. Her eyes blinked with warm light. Leaders trusted her, and the public adored her. Even the stoic Wobblestone Clan elders were enchanted.
+She arrived in Awen as a diplomatic robot, small and adorable. Her voice chimed like bells. Her eyes blinked with warm light. Leaders trusted her, and the public adored her. Even the stoic Wobblestone elders were enchanted.
 
 That was the trap. 
 

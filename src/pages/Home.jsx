@@ -47,7 +47,7 @@ function Home() {
             <Link to="/factions#wobblestone-clan" className="faction-pillar wobblestone-clan">
               <span className="pillar-line" aria-hidden="true"></span>
               <span className="pillar-icon">𓅣</span>
-              <span className="pillar-name">Wobblestone Clan</span>
+              <span className="pillar-name">Wobblestone</span>
               <span className="pillar-motto">"Stone doesn't bend. Neither do we."</span>
             </Link>
           </div>

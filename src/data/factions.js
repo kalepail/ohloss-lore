@@ -36,7 +36,7 @@ export const factions = [
   },
   {
     id: 'wobblestone-clan',
-    name: 'Wobblestone Clan',
+    name: 'Wobblestone',
     motto: "Stone doesn't bend. Neither do we.",
     icon: '𓅣',
     domain: 'Mist-wreathed mountains',

@@ -46,7 +46,7 @@ function Characters() {
           className={`filter-btn ${filter === 'wobblestone-clan' ? 'active' : ''}`}
           onClick={() => setFilter('wobblestone-clan')}
         >
-          Wobblestone Clan
+          Wobblestone
         </button>
         <button
           className={`filter-btn ${filter === 'other' ? 'active' : ''}`}
