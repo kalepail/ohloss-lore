@@ -6,24 +6,45 @@ export const guides = [
     description: 'Learn how to fund your Ohloss account with USDC to start playing.',
     sections: [
       {
-        heading: 'What is USDC?',
-        content: `USDC is a digital dollar that you'll use to participate in Ohloss games. It's stable, secure, and easy to use.`
+        heading: 'Intro',
+        content: `This part isn't the fun part. But it is the part that makes everything else work.
+
+Think of it as the tutorial level of Ohloss. A little setup now for some seriously fun gameplay.
+
+To deposit USDC into the vault, you'll need a classic Stellar account and some USDC on the Stellar network.`
       },
       {
-        heading: 'Setting Up Your Account',
-        content: `Before you can add USDC, you'll need to create your Ohloss account. Follow these steps:
+        heading: '1. Create a Stellar account',
+        content: `If you don't already have one, create a G-address (a classic Stellar account).
 
-1. Visit the Ohloss platform
-2. Connect your wallet or create a new one
-3. Complete account verification`
+We recommend using Freighter, which makes account creation and signing transactions quick and painless.`
       },
       {
-        heading: 'Adding USDC',
-        content: `Once your account is set up, you can add USDC in several ways:
+        heading: '2. Acquire USDC',
+        content: `Once your account is set up, acquire USDC on Stellar. You can do this by:
+- Purchasing USDC from an exchange that supports Stellar, or
+- Receiving USDC from another Stellar account
 
-- Transfer from an existing wallet
-- Purchase directly through our platform
-- Receive from another Ohloss player`
+Make sure the USDC you acquire is issued on the Stellar network.`
+      },
+      {
+        heading: '3. Send USDC to your Ohloss account',
+        content: `Send the USDC from your wallet to your Ohloss C-address.
+
+This is the account Ohloss uses to track deposits, gameplay, and rewards.`
+      },
+      {
+        heading: '4. Deposit USDC into the vault',
+        content: `After the USDC arrives, deposit it into the vault to:
+- Become eligible to claim yield
+- Boost your faction point gains based on deposit amount and duration`
+      },
+      {
+        heading: 'TL;DR',
+        content: `- Create a Stellar G-address 
+- Get USDC on Stellar
+- Send USDC to your Ohloss C-address
+- Deposit into the vault`
       }
     ]
   },
@@ -31,27 +52,49 @@ export const guides = [
     id: 'build-games',
     title: 'Build the Games',
     category: 'Creators',
-    description: 'Create your own games and earn faction points for your clan.',
+    description: 'Create your own games and earn a share of the yield.',
     sections: [
       {
-        heading: 'Why Build Games?',
-        content: `In Awen, any competition can generate faction points. By building games, you help your faction grow stronger while creating fun experiences for everyone.`
+        heading: 'About the Games',
+        content: `Games are not played on ohloss.com. Instead, each game is hosted and run wherever the game creator chooses.
+
+Game mechanics are entirely up to the developer.
+
+Build your game your way–it will probably be harder than you expect, but that challenge is part of the fun!`
       },
       {
         heading: 'Game Requirements',
-        content: `All games must meet these basic requirements:
-
-- Clear rules that determine a winner
-- Fair competition between participants
-- Proper faction point distribution`
+        content: `To be eligible for listing on Ohloss, your game must meet the following requirements:
+- The game must define one winner address and one loser address
+- A winner or loser may represent multiple players if your game design allows for this
+- The game must be fully functional and live on Mainnet
+- The game must be hosted on its own website
+- The game must report three pieces of information to Ohloss:
+  - Who is playing (reported in \`start_game\`)
+  - How many faction points each player wagered (reported in \`start_game\`)
+  - Who won and who lost (reported in \`end_game\`)
+- TRUE FOR HACKATHON, NOT OHLOSS IN GENERAL: The game must use zero-knowledge proofs in its smart contract logic when determining the winner and loser`
       },
       {
-        heading: 'Submitting Your Game',
-        content: `Ready to submit your game? Here's what you need:
+        heading: 'Review and Approval',
+        content: `Submit your game for approval in the #ohloss channel in the [Stellar Global Discord](https://discord.gg/J4fhKpNUrQ).
 
-1. A complete game design document
-2. Testing results showing fairness
-3. Faction sponsorship (optional but recommended)`
+Games are reviewed by judges before being added to the Ohloss game library.
+
+Bonus points for:
+- Fun and creative gameplay
+- Innovative mechanics
+- Integration with the Ohloss lore`
+      },
+      {
+        heading: 'Developer Rewards',
+        content: `If your game is played during an epoch, you receive a share of the USDC yield allocated to game developers for that epoch.
+
+Of the total yield generated by the vault, 10% is allocated to game developers. Your share of that portion is determined by how many faction points flow through your game during that epoch, relative to the total faction points generated across all games.
+
+For example, if your game generates 500 faction points during an epoch, and 10,000 faction points are generated across all games, you would receive 5% of the game developer portion of the yield for that epoch.
+
+You can view your eligible rewards and additional details by selecting "I Am A Developer" at the top of the screen.`
       }
     ]
   },
@@ -62,21 +105,95 @@ export const guides = [
     description: 'Join competitions, earn faction points, and help your clan rise to power.',
     sections: [
       {
-        heading: 'Finding Games',
-        content: `Games are happening all across Awen—in taverns, marketplaces, and hidden corners. Browse the game listings to find competitions that match your skills and interests.`
+        heading: 'Intro',
+        content: `Ohloss is the portal to games and lore: a game developer agency, rather than a game itself.`
       },
       {
-        heading: 'Joining a Competition',
-        content: `To join a game:
+        heading: 'How to Play',
+        content: `Create an account by selecting New Player, or log in as a Returning Player: both actions require a passkey. This will create or log you into your Ohloss \`C…\` account.
 
-1. Select a game from the listings
-2. Pay the entry fee (if required)
-3. Choose which faction receives your points
-4. Play and compete!`
+Choose a faction: Gilded Fin, Verdant Hollow, or Wobblestone. You can switch factions at any time, but the change won't take effect until the next epoch.
+
+You start with 100 faction points. The number of faction points you have determines how much you can wager in a game.`
       },
       {
-        heading: 'Earning Faction Points',
-        content: `When you win, your chosen faction earns points. The more you play and win, the stronger your faction becomes. Remember: every point brings your clan closer to challenging Empress Zebulita.`
+        heading: 'Getting More Faction Points',
+        content: `To earn additional faction points, deposit USDC into a yield-generating vault (via Blend protocol's fee-vault-v2).
+
+You can play games without depositing USDC into the vault, but you won't be able to claim any yield until you deposit at least 1 USDC. Learn how to acquire USDC in the [Get USDC Guide](/guides/get-usdc).
+
+When you deposit into the vault, the system will present a snapshot of your total deposit and how long your assets have been deposited. The vault is zero-loss, meaning you can withdraw your full deposited amount at any time.
+
+The more USDC you deposit–and the longer it stays deposited–the more faction points you can earn. The more USDC you deposit into the vault, the more faction points you will acquire.
+
+Read more about how your deposit amount and deposit duration affect faction point gains in the [Bonus Multiplier Guide](/guides/bonus-multiplier).`
+      },
+      {
+        heading: 'Playing Games',
+        content: `To start a new game:
+1. Navigate to the Games tab
+2. Select the game you'd like to play
+
+To join a game someone else has started:
+- Enter the session ID for the existing game
+
+When you play, you'll wager a number of your available faction points. Your opponent will wager their own amount of points as well.
+
+If you win, both your wagered points and your opponent's wagered points are burned. The number of points you wagered is added to your faction's total faction points.`
+      },
+      {
+        heading: 'Epochs and Rewards',
+        content: `Games are played during epochs, which last four days.
+
+At the end of each epoch, the yield generated by the vault becomes claimable by members of the winning faction who have deposited at least 1 USDC.
+
+The amount of yield each winning faction member can claim is proportional to the number of faction points they contributed during the epoch. Of the total yield generated by the vault for that epoch, 90% is distributed to players in the winning faction, and 10% is allocated to game developers.
+
+For example, if the winning faction earned 100 total faction points during an epoch and you contributed 10 of those points, you can claim 10% of the player portion of the yield generated for that epoch.
+
+Your vault deposits carry over from epoch to epoch–there's no need to redeposit USDC unless you want to increase your contribution.`
+      }
+    ]
+  },
+  {
+    id: 'bonus-multiplier',
+    title: 'Bonus Multiplier Explained',
+    category: 'Players',
+    description: 'Learn how deposit amounts and time affect your faction point earnings.',
+    sections: [
+      {
+        heading: 'Intro',
+        content: `The purpose of bonus multipliers is to reward healthy participation and discourage behaviors that could unbalance the game.
+
+Your faction point gains are based on two factors:
+- How much USDC you deposit into the vault
+- How long you have kept that USDC deposited`
+      },
+      {
+        heading: 'Deposit Amount Multiplier',
+        content: `USDC deposits earn faction points at a base rate–for example, $1 equals 100 faction points.
+
+As your total deposit increases, a multiplier scales up from 1x to a maximum of 2.45x as you approach a target deposit of $1,000.
+
+Deposits above $1,000 receive a gradually reduced multiplier, which tapers back toward 1x and reaches it again at around $10,000.
+
+This design prevents large whale deposits from dominating.`
+      },
+      {
+        heading: 'Time Deposit Multiplier',
+        content: `You also earn a multiplier based on how long your USDC remains in the vault, discouraging rapid deposit-and-withdraw behavior.
+
+The time-based multiplier scales up to 35 days, reaching a maximum of 2.45x faction points.
+
+It rewards sustained participation while ensuring long-term players can't completely overpower new ones.`
+      },
+      {
+        heading: 'Maximum Faction Point Rewards',
+        content: `The highest faction point multipliers are available to players who:
+- Deposit $1,000
+- Keep funds deposited for 35 days
+
+These multipliers stack, allowing players to earn up to 6x faction points per dollar deposited.`
       }
     ]
   }

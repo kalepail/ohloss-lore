@@ -6,6 +6,36 @@ function GuideDetail() {
   const { id } = useParams();
   const guide = getGuideById(id);
 
+  // Parse markdown-style links [text](url) into React elements
+  const parseLinks = (text) => {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = linkRegex.exec(text)) !== null) {
+      // Add text before the link
+      if (match.index > lastIndex) {
+        parts.push(text.substring(lastIndex, match.index));
+      }
+      // Add the link
+      const [, linkText, url] = match;
+      parts.push(
+        <Link key={match.index} to={url} className="guide-link">
+          {linkText}
+        </Link>
+      );
+      lastIndex = match.index + match[0].length;
+    }
+
+    // Add remaining text
+    if (lastIndex < text.length) {
+      parts.push(text.substring(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : text;
+  };
+
   if (!guide) {
     return (
       <div className="not-found">
@@ -42,27 +72,24 @@ function GuideDetail() {
                         const parts = line.split('**');
                         return (
                           <p key={lIndex}>
-                            <strong>{parts[1]}</strong>{parts[2]}
+                            <strong>{parts[1]}</strong>{parseLinks(parts[2])}
                           </p>
                         );
                       }
                       if (line.startsWith('- ')) {
-                        return <li key={lIndex}>{line.substring(2)}</li>;
+                        return <li key={lIndex}>{parseLinks(line.substring(2))}</li>;
                       }
-                      return <p key={lIndex}>{line}</p>;
+                      return <p key={lIndex}>{parseLinks(line)}</p>;
                     })}
                   </div>
                 );
               }
-              return <p key={pIndex}>{paragraph}</p>;
+              return <p key={pIndex}>{parseLinks(paragraph)}</p>;
             })}
           </section>
         ))}
       </div>
 
-      <div className="guide-nav">
-        <Link to="/guides" className="btn btn-secondary">← All Guides</Link>
-      </div>
     </div>
   );
 }

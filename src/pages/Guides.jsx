@@ -10,6 +10,7 @@ function Guides() {
       case 'get-usdc': return '⛁';
       case 'build-games': return '⛏';
       case 'play-games': return '모';
+      case 'bonus-multiplier': return '✕';
       default: return '📜';
     }
   };

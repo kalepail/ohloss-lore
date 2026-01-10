@@ -5,14 +5,14 @@
 
 .back-link {
   display: inline-block;
-  color: var(--color-text-muted);
+  color: #000;
   text-decoration: none;
   margin-bottom: 2rem;
   transition: color 0.3s ease;
 }
 
 .back-link:hover {
-  color: var(--color-gold);
+  color: var(--color-purple);
 }
 
 .not-found {
@@ -32,8 +32,10 @@
 
 .guide-header {
   margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: linear-gradient(135deg, #1e142d 0%, #140a1e 100%);
+  padding: 2rem;
+  border: 2px solid var(--color-gold);
+  border-radius: 8px;
 }
 
 .guide-category {
@@ -75,6 +77,10 @@
   color: var(--color-gold);
   font-family: 'Georgia', serif;
   margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, #1e142d 0%, #140a1e 100%);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 .guide-section p {
@@ -85,6 +91,16 @@
 
 .guide-section p:last-child {
   margin-bottom: 0;
+}
+
+.guide-link {
+  color: var(--color-gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.guide-link:hover {
+  color: var(--color-purple-light);
 }
 
 .formatted-content {
