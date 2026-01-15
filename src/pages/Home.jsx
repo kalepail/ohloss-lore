@@ -25,7 +25,7 @@ function Home() {
               <Link to="/characters" className="btn btn-secondary">Meet the Characters</Link>
               <Link to="/guides" className="btn btn-secondary">Learn to Play</Link>
             </div>
-            <p className="system-status">Epoch: _ | Last Faction Winner: _ | Players: _</p>
+            <p className="system-status">Epoch: 8 | Last Faction Winner: Verdant Hollow | <a href="https://ohloss.com" target="_blank" rel="noopener noreferrer">Play Now</a></p>
           </div>
 
           <div className="faction-pillars">

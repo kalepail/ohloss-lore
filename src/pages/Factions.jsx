@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { factions } from '../data/factions';
 import { characters } from '../data/characters';
-import awenTrailer from '../assets/awen-trailer.mp4';
+import awenTrailer from '../assets/AwenTrailer.mp4';
 import './Factions.css';
 
 function Factions() {
