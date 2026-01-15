@@ -21,7 +21,7 @@ function Home() {
               Play the games. Take the power.
             </p>
             <div className="hero-actions">
-              <Link to="/lore" className="btn btn-primary">Read the Lore</Link>
+              <Link to="/lore" className="btn btn-secondary">Read the Lore</Link>
               <Link to="/characters" className="btn btn-secondary">Meet the Characters</Link>
               <Link to="/guides" className="btn btn-secondary">Learn to Play</Link>
             </div>
