@@ -1,11 +1,12 @@
 import boppyImage from '../assets/boppy-headshot.png';
-import boppyVideo from '../assets/boppy-fishbite.mp4';
 import kaelImage from '../assets/kael-headshot.png';
-import kaelVideo from '../assets/kael-coldhart.mp4';
 import orrenImage from '../assets/orren-headshot.png';
-import orrenVideo from '../assets/orren-ash-video.mp4';
 import zebulitaImage from '../assets/zebulita-headshot.png';
 import zebulitaVideo from '../assets/zebulita.mp4';
+
+const boppyVideo = 'https://pub-926e83c1aba94367940772a4e9ff430b.r2.dev/boppy-fishbite.mp4';
+const kaelVideo = 'https://pub-926e83c1aba94367940772a4e9ff430b.r2.dev/kael-coldhart-small.mp4';
+const orrenVideo = 'https://pub-926e83c1aba94367940772a4e9ff430b.r2.dev/orren-ash-small.mp4';
 
 export const characters = [
   {
