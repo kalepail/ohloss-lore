@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { factions } from '../data/factions';
 import { characters } from '../data/characters';
-import awenTrailer from '../assets/AwenTrailer.mp4';
 import './Factions.css';
+
+const awenTrailerUrl = 'https://pub-926e83c1aba94367940772a4e9ff430b.r2.dev/AwenTrailer.mp4';
 
 function Factions() {
   const location = useLocation();
@@ -31,7 +32,7 @@ function Factions() {
 
       <div className="trailer-section">
         <video controls className="trailer-video">
-          <source src={awenTrailer} type="video/mp4" />
+          <source src={awenTrailerUrl} type="video/mp4" />
         </video>
       </div>
 
