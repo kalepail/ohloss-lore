@@ -74,19 +74,14 @@ Ohloss is built around a few core ideas:
 - Power is created through competing in games
 - Games shape societies
 
-The lore is designed to support modularity, play, and interpretation, not rigid canon.
-
 ## Ohloss.com
 
 https://ohloss.com is where players:
 
 - Create and manage their Ohloss accounts
-
 - Choose a faction
-
 - Participate in games to earn faction points
-
-- Explore the evolving state of the realm
+- View epoch number, faction winners, vault information
 
 ## Final Note
 
