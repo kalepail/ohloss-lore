@@ -1,6 +1,8 @@
 import boppyImage from '../assets/boppy-headshot.png';
 import francoisImage from '../assets/Francois Headshot.png';
+import hanaImage from '../assets/hana-headshot.png';
 import kaelImage from '../assets/kael-headshot.png';
+import lysaImage from '../assets/Lysa Quillfern Headshot.png';
 import orrenImage from '../assets/orren-headshot.png';
 import zebulitaImage from '../assets/zebulita-headshot.png';
 
@@ -74,6 +76,27 @@ export const characters = [
     abilities: ['Measured Response', 'Hold the Line', 'No Further Adjustments']
   },
   {
+    id: 'hana-stoneflight',
+    name: 'Hana Stoneflight',
+    title: 'Wobblestone',
+    faction: 'wobblestone-clan',
+    role: 'Swordsmaster',
+    image: hanaImage,
+    video: null,
+    mainAttribute: 'Discipline',
+    stats: {
+      Insight: 90,
+      Discipline: 95,
+      Cunning: 80,
+      Stubbornness: 100,
+      Vibes: 85,
+      Napping: 5
+    },
+    description: 'Hana Stoneflight has devoted as much of her life to meditation as she has to martial mastery, moving through battle with the same balance and precision a mason brings to stone. Her disciplined swordsmanship and unshakable calm make her a formidable presence, but her commitment to inner harmony is absolute. When the moment calls for reflection, Hana will settle into a cross-legged meditation—arrows flying, enemies advancing, timing be damned.',
+    backstory: 'Trained in the ancient sword traditions of the Wobblestone, Hana learned that true mastery lies not in the blade but in the mind that wields it. Her teachers spoke of stone that does not break because it does not resist—and Hana took this lesson to heart, finding strength in stillness even amid chaos.',
+    abilities: ['Stone Stance', 'Inner Harmony', 'Blade Meditation']
+  },
+  {
     id: 'orren-ash',
     name: 'Orren Ash',
     title: 'Verdant Hollow',
@@ -92,6 +115,27 @@ export const characters = [
     description: 'Orren Ash was picking mushrooms one afternoon when he suddenly tripped into a tree. He was found several days later, and ever since, he\'s had bark for skin. Naturally, he did the only sensible thing: he moved into the Verdant Hollow conservatories and buried himself in research to figure out why the heck he now looks like a tree. The work is ongoing. In the meantime, Orren has discovered his new condition has perks: his skin is tough as nails (whatever that means), and anytime he\'s somewhere he doesn\'t want to be, he can just leaf.',
     backstory: 'In the valley conservatories of the Verdant Hollow, Orren spent decades cataloging the histories of all three factions. When Zebulita seized power, Orren realized that memory itself had become a form of resistance.',
     abilities: ['Barkskin, Apparently', 'Just Leafs', 'Ongoing Research']
+  },
+  {
+    id: 'lysa-quillfern',
+    name: 'Lysa Quillfern',
+    title: 'Verdant Hollow',
+    faction: 'verdant-hollow',
+    role: 'Sentinel',
+    image: lysaImage,
+    video: null,
+    mainAttribute: 'Perception',
+    stats: {
+      Perception: 95,
+      Vigilance: 90,
+      Patience: 85,
+      Reliability: 100,
+      Accuracy: 60,
+      Confidence: 5
+    },
+    description: 'Lysa Quillfern grew up believing she\'d never be good at anything—until she discovered looking for stuff. With sharp eyes for scouting and steady hands for shading the sun, Lysa finally found her purpose after years of doubting her usefulness. Though she occasionally calls out the wrong things (trees, birds, or "something historical, probably"), she has never once failed to spot a real threat when it mattered, making her one of Verdant Hollow\'s most quietly reliable sentinels.',
+    backstory: 'For years, Lysa drifted through the conservatories of Verdant Hollow, convinced she had no gift worth mentioning. Then one afternoon, she spotted a Gilded Fin smuggler three valleys away while everyone else was still squinting at clouds. She\'s been on watch duty ever since—and secretly quite proud of it.',
+    abilities: ['Eagle Eye', 'False Alarm', 'When It Matters']
   },
   {
     id: 'zebulita',
