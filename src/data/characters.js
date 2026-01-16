@@ -1,12 +1,13 @@
 import boppyImage from '../assets/boppy-headshot.png';
+import francoisImage from '../assets/Francois Headshot.png';
 import kaelImage from '../assets/kael-headshot.png';
 import orrenImage from '../assets/orren-headshot.png';
 import zebulitaImage from '../assets/zebulita-headshot.png';
-import zebulitaVideo from '../assets/zebulita.mp4';
 
 const boppyVideo = 'https://pub-926e83c1aba94367940772a4e9ff430b.r2.dev/boppy-fishbite.mp4';
 const kaelVideo = 'https://pub-926e83c1aba94367940772a4e9ff430b.r2.dev/kael-coldhart-small.mp4';
 const orrenVideo = 'https://pub-926e83c1aba94367940772a4e9ff430b.r2.dev/orren-ash-small.mp4';
+const zebulitaVideo = 'https://pub-926e83c1aba94367940772a4e9ff430b.r2.dev/zebulita-small.mp4';
 
 export const characters = [
   {
@@ -29,6 +30,27 @@ export const characters = [
     description: 'Boppy has never told anyone about her past. Many men have asked. Not all of them have lived. Cross her on the dock, and you\'ll be darn sure to hear her, laughing, swaggering, pistols at the ready. Boppy\'s got that bright-eyed charm that makes people drop their guard… right before she drops them. If you catch her eye, you\'re about to get lucky or incredibly unlucky. And there ain\'t no in between.',
     backstory: 'Growing up in the marshlands of the Gilded Fin, Boppy learned early that fortune favors the bold—and the fast. Now one of the delta\'s most notorious traders, Boppy moves goods, secrets, and occasionally people through routes only they know.',
     abilities: ['Shoot First, Ask Never', 'Dockside Diplomacy', 'Lucky or Dead']
+  },
+  {
+    id: 'francois-dubois',
+    name: 'Francois Dubois',
+    title: 'Gilded Fin',
+    faction: 'gilded-fin',
+    role: 'French Pirate',
+    image: francoisImage,
+    video: null,
+    mainAttribute: 'Brazen',
+    stats: {
+      Debonair: 90,
+      Grandiose: 95,
+      Impulsive: 85,
+      Brazen: 88,
+      Vainglorious: 100,
+      Humility: 5
+    },
+    description: 'Yells of "Excusè-moi!" and "Arrête-toi!" echo across the docks when Francois Dubois is near. A fearsome pirate with a sordid past, Francois left his watery life after losing his ship in a high-stakes game of doubloons. Bringing his swashbuckling savvy and impressive swordsmanship to shore, Francois seeks to make a name for himself on land as he did at sea.',
+    backstory: 'Once captain of the notorious vessel La Belle Tempête, Francois ruled the seas with flair and panache. But one fateful night, a cunning card shark bested him at his own game, and Francois watched his beloved ship sail away under a new flag. Now landlocked but never defeated, he brings theatrical combat and French charm to the Gilded Fin.',
+    abilities: ['En Garde!', 'Dramatic Flourish', 'Charme Français']
   },
   {
     id: 'kael-coldhart',
