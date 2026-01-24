@@ -54,7 +54,7 @@ This is the account Ohloss uses to track deposits, gameplay, and rewards.`
     id: 'build-games',
     title: 'Build the Games',
     category: 'Creators',
-    description: 'Create your own games and earn a share of the yield.',
+    description: 'Create your own games and get a share of the yield.',
     sections: [
       {
         heading: 'About the Games',
@@ -75,7 +75,7 @@ Build your game your way–it will probably be harder than you expect, but that 
     - Who is playing (reported in \`start_game\`)
     - How many faction points each player wagered (reported in \`start_game\`)
     - Who won and who lost (reported in \`end_game\`)
-- **Note:** this rule is true for the Hackathon, but not Ohloss in general. The game must use zero-knowledge proofs in its smart contract logic when determining the winner and loser`
+- **Note:** for the hackathon only, games must use zero-knowledge proofs in its smart contract logic when determining the winner and loser and be live on Testnet`
       },
       {
         heading: 'Review and Approval',
@@ -126,7 +126,7 @@ You can play games without depositing USDC into the vault, but you won't be able
 
 When you deposit into the vault, the system will present a snapshot of your total deposit and how long your assets have been deposited. The vault is zero-loss, meaning you can withdraw your full deposited amount at any time.
 
-The more USDC you deposit–and the longer it stays deposited–the more faction points you can earn. The more USDC you deposit into the vault, the more faction points you will acquire.
+The more USDC you deposit–and the longer it stays deposited–the more faction points you acquire.
 
 Read more about how your deposit amount and deposit duration affect faction point gains in the [Bonus Multiplier Guide](/guides/bonus-multiplier).`
       },
