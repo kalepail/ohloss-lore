@@ -4,6 +4,7 @@ export const guides = [
     title: 'Get USDC in your Ohloss Account',
     category: 'Getting Started',
     description: 'Learn how to fund your Ohloss account with USDC to start playing.',
+    video: 'https://pub-926e83c1aba94367940772a4e9ff430b.r2.dev/gideon-usdc.mp4',
     sections: [
       {
         heading: 'Intro',

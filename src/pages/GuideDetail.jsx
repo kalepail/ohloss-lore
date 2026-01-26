@@ -87,6 +87,14 @@ function GuideDetail() {
         <span className="guide-category">{guide.category}</span>
         <h1>{guide.title}</h1>
         <p className="guide-description">{guide.description}</p>
+        {guide.video && (
+          <div className="guide-video">
+            <h2>A note from Old Salt Gideon...</h2>
+            <video controls>
+              <source src={guide.video} type="video/mp4" />
+            </video>
+          </div>
+        )}
       </header>
 
       <div className="guide-content">
