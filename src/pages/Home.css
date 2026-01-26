@@ -409,6 +409,11 @@
   text-shadow: 0 0 10px rgba(201, 162, 39, 0.1);
 }
 
+.external-icon {
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
 /* =====================
    FACTION PILLARS
    ===================== */
