@@ -26,11 +26,13 @@ function Navbar() {
             Factions
           </NavLink>
         </li>
+{/* Hidden for now
         <li>
           <NavLink to="/guides" className={({ isActive }) => isActive ? 'active' : ''}>
             Guides
           </NavLink>
         </li>
+*/}
       </ul>
     </nav>
   );
